@@ -51,7 +51,8 @@
       <div class="contact">
         <ul>
           <li v-for="contatti in contacts">
-            {{ contatti.name }}
+            <img :src="contatti.avatar" alt="">
+            <span>{{ contatti.name }}</span>
           </li>
         </ul>
       </div>
