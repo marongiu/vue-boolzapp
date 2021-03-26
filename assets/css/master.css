@@ -23,7 +23,6 @@ aside {
   float: left;
   width: 60%;
   height: 100%;
-  background-color: red;
 }
 
 .user-info {
@@ -31,7 +30,30 @@ aside {
   height: 70px;
   background-color: #EAEAEA;
   border-right: 1px solid lightgrey;
+  padding: 10px 10px;
 }
+
+/* Fisso le immagini */
+img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+#user-controller-left {
+  width: 100%;
+  text-align: right;
+}
+
+#user-controller-left > i {
+  font-size: 18px;
+  padding: 0 5px;
+  color: #b1b1b1;
+}
+
+#user-controller-left:last-child {
+  margin-right: 10px;
+}
+
 
 .notifications {
   width: 100%;
