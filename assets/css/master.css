@@ -1,6 +1,7 @@
 body {
   height: 100vh;
   background: linear-gradient(0deg, #DFDFDF 85%, #009788 15%);
+  font-family: 'Lato', sans-serif;
   overflow: hidden;
 }
 
@@ -26,6 +27,8 @@ aside {
 }
 
 .user-info {
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 70px;
   background-color: #EAEAEA;
@@ -48,18 +51,54 @@ img {
   font-size: 18px;
   padding: 0 5px;
   color: #b1b1b1;
+  cursor: pointer;
 }
 
 #user-controller-left:last-child {
   margin-right: 10px;
 }
 
-
+/* Notifiche */
 .notifications {
+  padding: 10px;
   width: 100%;
   height: 80px;
   background-color: #8EDAFC;
 }
+
+.notifications span > i {
+  font-size: 22px;
+  cursor: pointer;
+  color: #8edafc;
+}
+
+.notifications span {
+  background-color: #ffff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notifications-p {
+  margin-left: 10px;
+}
+
+.notifications-p p:last-child {
+  color: #4F7485;
+  font-size: 13px;
+  text-decoration: underline;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Sezione cerca */
 
 .search {
   width: 100%;
