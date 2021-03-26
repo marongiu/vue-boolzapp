@@ -12,11 +12,11 @@ body {
   background-color: #ffff;
 }
 
+/* Aside */
 aside {
   float: left;
   width: 40%;
   height: 100%;
-  background-color: black;
 }
 
 .right {
@@ -24,4 +24,52 @@ aside {
   width: 60%;
   height: 100%;
   background-color: red;
+}
+
+.user-info {
+  width: 100%;
+  height: 70px;
+  background-color: #EAEAEA;
+  border-right: 1px solid lightgrey;
+}
+
+.notifications {
+  width: 100%;
+  height: 80px;
+  background-color: #8EDAFC;
+}
+
+.search {
+  width: 100%;
+  height: 50px;
+  background-color: #FAFAFA;
+}
+
+.contact {
+  width: 100%;
+  height: calc(100% - 200px);
+  background-color: #ffff;
+  overflow-y: scroll;
+}
+
+/* Lato destro */
+
+.header-chat {
+  width: 100%;
+  height: 70px;
+  background-color: #EAEAEA;
+}
+
+.chat-body {
+  width: 100%;
+  height: calc(100% - 140px);
+  background-image: url('../img/mine.jpg');
+  overflow-y: scroll;
+}
+
+.chat-box {
+  background-color: #f3eeea;
+  width: 100%;
+  height: 70px;
+  border-left: 1px solid lightgrey;
 }
