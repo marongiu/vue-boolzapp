@@ -1,0 +1,13 @@
+body {
+  height: 100vh;
+  background: linear-gradient(0deg, #DFDFDF 85%, #009788 15%);
+  overflow: hidden;
+}
+
+#root {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 30px;
+  height: 95%;
+  background-color: #ffff;
+}
