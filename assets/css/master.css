@@ -145,6 +145,26 @@ p {
   overflow-y: scroll;
 }
 
+.contact ul li > img {
+  width: 55px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+  padding: 15px 15px;
+}
+
+ul li:hover {
+  opacity: 0.9;
+  background-color: #eeee;
+  cursor: pointer;
+}
+
 /* Lato destro */
 
 .header-chat {
@@ -187,19 +207,4 @@ p {
   outline: none;
   border: none;
   width: 100%;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-ul li {
-  list-style: none;
-  padding: 15px 15px;
-}
-
-ul li:hover {
-  background-color: #eeee;
-  cursor: pointer;
 }
