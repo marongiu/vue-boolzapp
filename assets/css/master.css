@@ -171,6 +171,15 @@ ul {
   font-size: 16.5px;
 }
 
+#access {
+  width: 100%;
+  font-size: 12.5px;
+  display: flex;
+  justify-content: end;
+  color: grey;
+  padding-top: 5px;
+}
+
 
 /* Lato destro */
 

@@ -3,7 +3,9 @@ var app = new Vue({
 	data: {
 		// Dati username
 		userName: '',
+		// moment.js ultimo accesso
 		lastAccess: moment().locale('it').calendar().toLowerCase(),
+		accessUser: moment().locale('it').format('dddd'),
 		contacts: [
 			{
 				name: 'Michele',

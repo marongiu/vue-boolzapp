@@ -54,6 +54,9 @@
           <li v-for="(contatto, i) in contacts" @click="changeUser(i)">
             <img :src= " './assets/img/' + 'avatar'+ contatto.avatar + '.jpg'">
             <span> {{ contatto.name }} </span>
+            <div id="access">
+              {{accessUser}}
+            </div>
           </li>
         </ul>
       </div>
