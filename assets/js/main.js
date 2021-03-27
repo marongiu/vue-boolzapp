@@ -1,6 +1,7 @@
 var app = new Vue({
 	el: '#root',
 	data: {
+		userName: '',
 		contacts: [
 			{
 				name: 'Michele',
@@ -85,6 +86,12 @@ var app = new Vue({
 					}
 				],
 			},
-		]
+		],
+	},
+	methods: {
+		// Salvo il contatto
+		changeUser: function (i) {
+			this.userName = this.contacts[i];
+		},
 	}
 });

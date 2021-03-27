@@ -51,9 +51,9 @@
       <!-- Contatti -->
       <div class="contact">
         <ul>
-          <li v-for="contatto in contacts">
+          <li v-for="(contatto, i) in contacts" @click="changeUser(i)">
             <img :src= " './assets/img/' + 'avatar'+ contatto.avatar + '.jpg'">
-            <span>{{ contatto.name }}</span>
+            <span> {{ contatto.name }} </span>
           </li>
         </ul>
       </div>
@@ -62,8 +62,8 @@
     <div class="right">
       <!-- Nome utente contatto -->
       <div class="header-chat">
-
-
+        <p>{{ userName.name }}</p>
+        <img :src=" './assets/img/' + 'avatar'+ userName.avatar + '.jpg'" alt="">
         <!-- Controlli destra -->
         <div class="header-controller-right">
           <span><i class="fas fa-search"></i></span>
