@@ -41,19 +41,19 @@ img {
   border-radius: 50%;
 }
 
-#user-controller-left {
+#user-controller-right {
   width: 100%;
   text-align: right;
 }
 
-#user-controller-left > i {
+#user-controller-right > i {
   font-size: 18px;
   padding: 0 10px;
   color: #b1b1b1;
   cursor: pointer;
 }
 
-#user-controller-left:last-child {
+#user-controller-right:last-child {
   margin-right: 10px;
 }
 
@@ -179,7 +179,6 @@ ul {
   color: grey;
   padding-top: 5px;
 }
-
 
 /* Lato destro */
 

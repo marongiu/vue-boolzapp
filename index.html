@@ -22,7 +22,9 @@
         <div id="logo">
           <img src="./assets\img\avatar_1.jpg" alt="">
         </div>
-        <div id="user-controller-left">
+
+        <!-- Controlli destra -->
+        <div id="user-controller-right">
           <i class="fas fa-circle-notch"></i>
           <i class="fas fa-comment-alt"></i>
           <i class="fas fa-ellipsis-v"></i>
@@ -55,7 +57,7 @@
           <li v-for="(user, i) in contacts" @click="changeUser(i)">
             <img :src= " './assets/img/' + 'avatar'+ user.avatar + '.jpg'">
             <!-- Nome contatto -->
-            <span> {{ user.name }} </span>
+            <span> {{ user.name }}</span>
             <!-- Ultima chat visita con il contatto -->
             <div id="access">
               {{accessUser}}
@@ -78,7 +80,7 @@
           <div class="receiver-user-info">
             <p>{{ user.name }}</p>
             <!-- Lo mostro solo se mi mostra il nome -->
-            <p v-if="(user.length = user.name)" id="lastaccess">Ultimo accesso {{lastAccess}}</p>
+            <p id="lastaccess">Ultimo accesso {{lastAccess}}</p>
           </div>
         </div>
         <!-- Controlli destra -->
@@ -96,7 +98,7 @@
             <!-- Messaggi inviati -->
             <div class="sent" v-if="(message.status == 'sent')"><span>{{message.text}}  <span class="dateMessage">{{messageDate}}</span> </span></div>
             <!-- Messaggi ricevuti -->
-            <div class="received" v-else> <span>{{message.text}} <span class="dateMessage">{{messageDate}}</span> </span></div>
+            <div class="received" v-else> <span> {{message.text}} <span class="dateMessage">{{messageDate}}</span> </span></div>
           </li>
         </ul>
         <div class="chat-box">

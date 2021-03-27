@@ -98,7 +98,7 @@ var app = new Vue({
 			},
 		],
 	},
-	
+
 	// Document ready contatto Michele
 	mounted: function () {
 		this.user = this.contacts[0]
@@ -111,14 +111,16 @@ var app = new Vue({
 			this.user = this.contacts[i];
 		},
 		addMessage: function () {
-			this.user.messages.push(
-				{
-					date: this.messageDate,
-					text: this.text,
-					status: 'sent'
-				},
-			)
-			this.text = ''
+			if (this.text.length >= 1) {
+				this.user.messages.push(
+					{
+						date: this.messageDate,
+						text: this.text,
+						status: 'sent'
+					},
+				)
+				this.text = ''
+			}
 		}
 	}
 });
