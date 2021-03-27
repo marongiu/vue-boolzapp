@@ -62,8 +62,14 @@
     <div class="right">
       <!-- Nome utente contatto -->
       <div class="header-chat">
-        <p>{{ userName.name }}</p>
-        <img :src=" './assets/img/' + 'avatar'+ userName.avatar + '.jpg'" alt="">
+        <!-- Contatto con cui scrivo -->
+        <div class="receiver-user">
+          <span><img :src=" './assets/img/' + 'avatar'+ userName.avatar + '.jpg'" alt=""></span>
+          <div class="receiver-user-info">
+            <p>{{ userName.name }}</p>
+            <p v-if="(userName.length = userName.name)" id="lastaccess">Ultimo accesso</p>
+          </div>
+        </div>
         <!-- Controlli destra -->
         <div class="header-controller-right">
           <span><i class="fas fa-search"></i></span>
