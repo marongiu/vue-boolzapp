@@ -51,9 +51,9 @@
       <!-- Contatti -->
       <div class="contact">
         <ul>
-          <li v-for="contatti in contacts">
-            <img :src="contatti.avatar" alt="">
-            <span>{{ contatti.name }}</span>
+          <li v-for="contatto in contacts">
+            <img :src= " './assets/img/' + 'avatar'+ contatto.avatar + '.jpg'">
+            <span>{{ contatto.name }}</span>
           </li>
         </ul>
       </div>
@@ -63,7 +63,7 @@
       <!-- Nome utente contatto -->
       <div class="header-chat">
 
-        
+
         <!-- Controlli destra -->
         <div class="header-controller-right">
           <span><i class="fas fa-search"></i></span>
@@ -73,7 +73,10 @@
       </div>
       <!-- Corpo della chat -->
       <div class="chat-body">
+        <!-- Box della chat -->
+        <div class="chat-box">
 
+        </div>
       </div>
 
       <!-- Invio messaggi -->

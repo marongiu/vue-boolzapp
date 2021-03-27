@@ -48,7 +48,7 @@ img {
 
 #user-controller-left > i {
   font-size: 18px;
-  padding: 0 5px;
+  padding: 0 10px;
   color: #b1b1b1;
   cursor: pointer;
 }
@@ -153,23 +153,25 @@ ul {
   padding: 0;
 }
 
-ul li {
+.contact ul li {
   display: flex;
   list-style: none;
   padding: 15px 15px;
 }
 
-ul li:hover {
+.contact ul li:hover {
   opacity: 0.9;
   background-color: #eeee;
   cursor: pointer;
 }
 
-ul li > span {
+.contact ul li > span {
   padding-top: 5px;
   padding-left: 12px;
   font-size: 16.5px;
 }
+
+
 /* Lato destro */
 
 .header-chat {
