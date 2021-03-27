@@ -2,7 +2,7 @@ var app = new Vue({
 	el: '#root',
 	data: {
 		// Dati username
-		userName: '',
+		user: '',
 		// moment.js ultimo accesso
 		lastAccess: moment().locale('it').calendar().toLowerCase(),
 		accessUser: moment().locale('it').format('dddd'),
@@ -95,7 +95,7 @@ var app = new Vue({
 	methods: {
 		// Salvo il contatto
 		changeUser: function (i) {
-			this.userName = this.contacts[i];
+			this.user = this.contacts[i];
 		},
 	}
 });
