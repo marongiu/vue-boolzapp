@@ -3,6 +3,8 @@ var app = new Vue({
 	data: {
 		// Dati username
 		user: '',
+		// Valore input
+		text: '',
 		// moment.js
 		// ultimo accesso
 		lastAccess: moment().locale('it').calendar().toLowerCase(),
@@ -96,10 +98,27 @@ var app = new Vue({
 			},
 		],
 	},
+	
+	// Document ready contatto Michele
+	mounted: function () {
+		this.user = this.contacts[0]
+	},
+
+	// Funzioni
 	methods: {
 		// Salvo il contatto
 		changeUser: function (i) {
 			this.user = this.contacts[i];
 		},
+		addMessage: function () {
+			this.user.messages.push(
+				{
+					date: this.messageDate,
+					text: this.text,
+					status: 'sent'
+				},
+			)
+			this.text = ''
+		}
 	}
 });
