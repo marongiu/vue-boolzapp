@@ -228,6 +228,45 @@ ul {
   overflow-y: scroll;
 }
 
+.chat-body ul {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.chat-body ul li {
+  width: 100%;
+  list-style: none;
+  padding-top: 20px;
+  font-size: 15px;
+}
+
+.chat-body ul li .sent {
+  text-align: right;
+}
+
+.chat-body ul li .received {
+  text-align: left;
+}
+
+.sent span:first-child {
+  padding: 10px;
+  background-color: #dcf8c6;
+  border-radius: 15px;
+}
+
+.received span:first-child {
+  padding: 10px;
+  background-color: #ffff;
+  border-radius: 15px;
+}
+
+.dateMessage {
+  padding-top: 10px;
+  font-size: 11px;
+  color: grey;
+}
+
 /* Controlli chat smile ecc.. */
 .chat-controller {
   background-color: #f3eeea;

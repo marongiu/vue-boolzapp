@@ -93,7 +93,10 @@
         <ul>
           <!-- Ciclo array messages -->
           <li v-for="(message, i) in user.messages">
-            {{message.text}}
+            <!-- Messaggi inviati -->
+            <div class="sent" v-if="(message.status == 'sent')"><span>{{message.text}}  <span class="dateMessage">{{messageDate}}</span> </span></div>
+            <!-- Messaggi ricevuti -->
+            <div class="received" v-else> <span>{{message.text}} <span class="dateMessage">{{messageDate}}</span> </span></div>
           </li>
         </ul>
         <div class="chat-box">
