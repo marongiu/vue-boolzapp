@@ -112,6 +112,7 @@ p {
   color: #ffff;
 }
 
+/* Visibilita con vue.js */
 .visible {
   display: none;
 }
