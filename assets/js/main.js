@@ -8,10 +8,12 @@ var app = new Vue({
 		// moment.js
 		// ultimo accesso
 		lastAccess: moment().locale('it').calendar().toLowerCase(),
-		// Accesso utenti
+		// Ultima chat con utente
 		accessUser: moment().locale('it').format('dddd'),
 		// Orario messaggi
 		messageDate: moment().locale('it').format('LT'),
+		// Cerca utenti
+		search: '',
 		contacts: [
 			{
 				name: 'Michele',
@@ -103,7 +105,6 @@ var app = new Vue({
 	mounted: function () {
 		this.user = this.contacts[0]
 	},
-
 	// Funzioni
 	methods: {
 		// Salvo il contatto
@@ -111,16 +112,53 @@ var app = new Vue({
 			this.user = this.contacts[i];
 		},
 		addMessage: function () {
+			// Controllo
 			if (this.text.length >= 1) {
+				// Pusho quando mando
 				this.user.messages.push(
 					{
 						date: this.messageDate,
 						text: this.text,
 						status: 'sent'
-					},
-				)
+					}
+				),
 				this.text = ''
-			}
+
+				// Funzione timeout con self
+				var vueSelf = this;
+				console.log(self);
+				// Funzione timeout
+				setTimeout(function () {
+					let interval =
+					{
+						date: this.messageDate,
+						text: "ok",
+						status: 'received'
+					}
+					vueSelf.user.messages.push(interval)
+					// ogni 3 secondi pusha "ok"
+				},3000)
+
+				// alternativa on arrowfunction
+				// arrow function
+				// setTimeout(() => {
+				// 	let obj =
+				// 	{
+				// 			date: this.messageDate,
+				// 			text: "ok",
+				// 			status: 'received'
+				// 	}
+				// 	this.user.messages.push(obj)
+				// },3000)
+
+			} 			// fine if
+		}
+	},
+	computed: {
+		searchUser: function () {
+			console.log("ok");
 		}
 	}
 });
+
+//

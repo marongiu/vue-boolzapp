@@ -46,7 +46,7 @@
       <div class="search-box">
         <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
-          <input type="text" class="form-control" placeholder=" Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+          <input type="text" class="form-control" placeholder=" Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1"  v-model="search">
         </div>
       </div>
 
@@ -55,7 +55,7 @@
         <ul>
           <!-- Contatti ciclo -->
           <li v-for="(user, i) in contacts" @click="changeUser(i)">
-            <img :src= " './assets/img/' + 'avatar'+ user.avatar + '.jpg'">
+            <img :src= " `./assets/img/avatar${user.avatar}.jpg`">
             <!-- Nome contatto -->
             <span> {{ user.name }}</span>
             <!-- Ultima chat visita con il contatto -->
@@ -74,7 +74,7 @@
         <div class="receiver-user">
           <!-- Immagine contatto selezionato -->
           <span>
-            <img :src=" './assets/img/' + 'avatar'+ user.avatar + '.jpg'" alt="">
+            <img :src=" `./assets/img/avatar${user.avatar}.jpg` " alt="">
           </span>
           <!-- Informazioni contatto come accesso -->
           <div class="receiver-user-info">
