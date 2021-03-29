@@ -156,7 +156,7 @@ var app = new Vue({
 	computed: {
 		searchUser: function () {
 			return this.contacts.filter((contatto) => {
-				return contatto.name.includes(this.search)
+				return contatto.name.toLowerCase().includes(this.search.toLowerCase())
 			})
 		}
 	}
