@@ -98,27 +98,42 @@
           <!-- Ciclo array messages -->
           <li v-for="(message, i) in user.messages">
             <!-- Messaggi inviati -->
-            <div class="sent" v-if="(message.status == 'sent')"><span>{{message.text}}  <span class="dateMessage">{{messageDate}}</span> <span @click="remove(message,i)" class="remove"><i class="fas  fa-angle-down"></i></span></span></div>
-            <!-- Messaggi ricevuti -->
-            <div class="received" v-else> <span> {{message.text}} <span class="dateMessage">{{messageDate}}</span> <span @click="remove(message,i)" class="remove"><i class="fas  fa-angle-down"></i></span></span></div>
-          </li>
-        </ul>
-        <div class="chat-box">
-          <!-- Qui i messaggi -->
+            <div class="sent" v-if="(message.status == 'sent')">
+              <span>{{message.text}}  <span class="dateMessage">{{messageDate}}</span>
+              <!-- Funzione rimuovi -->
+              <span @click="remove(message,i)" class="remove">
+                <i class="fas  fa-angle-down"></i>
+                <!-- dropdown -->
+              </span>
+            </span>
+          </div>
+          <!-- Messaggi ricevuti -->
+          <div class="received" v-else>
+            <span> {{message.text}} <span class="dateMessage">{{messageDate}}</span>
+            <!-- Funzioni rimuovi -->
+            <span @click="remove(message,i)" class="remove">
+              <!-- dropdown -->
+              <i class="fas  fa-angle-down"></i>
+              <span class="dropdown">
+              </span>
+            </span>
+          </span>
         </div>
-      </div>
-
-      <!-- Invio messaggi -->
-      <div class="chat-controller">
-        <span><i class="far fa-smile"></i></span>
-        <span class="inputbox"><input type="text" placeholder="Scrivi un messaggio" v-model="text" @keyup.enter="addMessage"></span>
-        <span><i class="fas fa-microphone"></i></span>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js" integrity="sha512-LGXaggshOkD/at6PFNcp2V2unf9LzFq6LE+sChH7ceMTDP0g2kn6Vxwgg7wkPP7AAtX+lmPqPdxB47A0Nz0cMQ==" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="./assets/js/main.js" charset="utf-8"></script>
+  <!-- Invio messaggi -->
+  <div class="chat-controller">
+    <span><i class="far fa-smile"></i></span>
+    <span class="inputbox"><input type="text" placeholder="Scrivi un messaggio" v-model="text" @keyup.enter="addMessage"></span>
+    <span><i class="fas fa-microphone"></i></span>
+  </div>
+</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js" integrity="sha512-LGXaggshOkD/at6PFNcp2V2unf9LzFq6LE+sChH7ceMTDP0g2kn6Vxwgg7wkPP7AAtX+lmPqPdxB47A0Nz0cMQ==" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="./assets/js/main.js" charset="utf-8"></script>
 </body>
 </html>
