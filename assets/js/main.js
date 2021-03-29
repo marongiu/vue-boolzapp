@@ -237,7 +237,7 @@ var app = new Vue({
 			} 			// fine if
 		},
 		remove: function (message,i) {
-			let messaggioEliminato = message;
+			message.text = "Hai eliminato questo messaggio"
 
 		}
 	},
