@@ -236,6 +236,10 @@ var app = new Vue({
 				},3000)
 			} 			// fine if
 		},
+		remove: function (message,i) {
+			let messaggioEliminato = message;
+
+		}
 	},
 	computed: {
 		// Ricerca utenti con filter

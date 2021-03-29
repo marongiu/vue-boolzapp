@@ -59,7 +59,7 @@
             <!-- Nome contatto -->
             <span> {{ user.name }}</span>
             <!-- Ultima chat visita con il contatto -->
-            
+
             <div id="access">
               {{accessUser}}
 
@@ -98,9 +98,9 @@
           <!-- Ciclo array messages -->
           <li v-for="(message, i) in user.messages">
             <!-- Messaggi inviati -->
-            <div class="sent" v-if="(message.status == 'sent')"><span>{{message.text}}  <span class="dateMessage">{{messageDate}}</span> </span></div>
+            <div class="sent" v-if="(message.status == 'sent')"><span>{{message.text}}  <span class="dateMessage">{{messageDate}}</span> <span @click="remove(message,i)" class="remove"><i class="fas  fa-angle-down"></i></span></span></div>
             <!-- Messaggi ricevuti -->
-            <div class="received" v-else> <span> {{message.text}} <span class="dateMessage">{{messageDate}}</span> </span></div>
+            <div class="received" v-else> <span> {{message.text}} <span class="dateMessage">{{messageDate}}</span> <span @click="remove(message,i)" class="remove"><i class="fas  fa-angle-down"></i></span></span></div>
           </li>
         </ul>
         <div class="chat-box">
