@@ -165,6 +165,12 @@ p {
   overflow-y: scroll;
 }
 
+/* reimposto height notification */
+
+.no_notification {
+  height: calc(100% - 120px);
+}
+
 .contact ul li > img {
   width: 55px;
 }

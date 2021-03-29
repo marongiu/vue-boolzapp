@@ -7,6 +7,8 @@ var app = new Vue({
 		text: '',
 		// Visibilita Notifiche
 		visible: '',
+		// Reimposto height contatti
+		no_notification: '',
 
 		messageslast: '',
 		// moment.js
@@ -243,7 +245,9 @@ var app = new Vue({
 		},
 		notifications: function () {
 			this.visible = 'visible'
-			console.log(this.visible);
+			if (this.visible == 'visible') {
+				this.no_notification = 'no_notification'
+			}
 		}
 	},
 	computed: {

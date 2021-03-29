@@ -51,7 +51,7 @@
       </div>
 
       <!-- Contatti -->
-      <div class="contact">
+      <div class="contact" :class="no_notification">
         <ul>
           <!-- Contatti ciclo -->
           <li  v-for="(user, i) in searchUser" @click="changeUser(i)">
