@@ -66,6 +66,7 @@ img {
 
 /* Notifiche */
 .notifications {
+  display: flex;
   padding: 15px;
   width: 100%;
   height: 80px;
@@ -101,6 +102,18 @@ img {
 p {
   margin: 0;
   padding: 0;
+}
+
+#click-notifications {
+  cursor: pointer;
+}
+
+#click-notifications:hover {
+  color: #ffff;
+}
+
+.visible {
+  display: none;
 }
 
 

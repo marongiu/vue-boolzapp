@@ -5,6 +5,8 @@ var app = new Vue({
 		user: '',
 		// Valore input
 		text: '',
+		// Visibilita Notifiche
+		visible: '',
 
 		messageslast: '',
 		// moment.js
@@ -238,6 +240,10 @@ var app = new Vue({
 		},
 		remove: function (message,i) {
 			message.text = "Hai eliminato il messaggio"
+		},
+		notifications: function () {
+			this.visible = 'visible'
+			console.log(this.visible);
 		}
 	},
 	computed: {

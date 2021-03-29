@@ -32,14 +32,14 @@
       </div>
 
       <!-- Notifiche -->
-      <div class="notifications d-flex">
+      <div  class= "notifications" :class="visible">
         <!-- Notifica icona -->
         <span><i class="fas fa-bell-slash"></i></span>
         <!-- Paragrafo p -->
         <div class="notifications-p">
           <!-- Notifiche paragrafi -->
           <p>Ricevi notifiche di nuovi messaggi</p>
-          <p>Attiva notifiche desktop</p>
+          <p id="click-notifications" @click="notifications">Attiva notifiche desktop</p>
         </div>
       </div>
       <!-- Ricerca -->
