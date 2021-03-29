@@ -165,6 +165,10 @@ ul {
   cursor: pointer;
 }
 
+.active {
+  background-color: red;
+}
+
 .contact ul li > span {
   padding-top: 5px;
   padding-left: 12px;

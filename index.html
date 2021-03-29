@@ -54,7 +54,7 @@
       <div class="contact">
         <ul>
           <!-- Contatti ciclo -->
-          <li v-for="(user, i) in contacts" @click="changeUser(i)">
+          <li  v-for="(user, i) in searchUser" @click="changeUser(i)">
             <img :src= " `./assets/img/avatar${user.avatar}.jpg`">
             <!-- Nome contatto -->
             <span> {{ user.name }}</span>

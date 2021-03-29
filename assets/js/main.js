@@ -126,7 +126,6 @@ var app = new Vue({
 
 				// Funzione timeout con self
 				var vueSelf = this;
-				console.log(self);
 				// Funzione timeout
 				setTimeout(function () {
 					let interval =
@@ -152,11 +151,13 @@ var app = new Vue({
 				// },3000)
 
 			} 			// fine if
-		}
+		},
 	},
 	computed: {
 		searchUser: function () {
-			console.log("ok");
+			return this.contacts.filter((contatto) => {
+				return contatto.name.includes(this.search)
+			})
 		}
 	}
 });
