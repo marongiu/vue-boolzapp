@@ -185,11 +185,42 @@ ul {
 #access {
   width: 100%;
   font-size: 12.5px;
-  display: flex;
-  justify-content: end;
+  text-align: right;
   color: grey;
   padding-top: 5px;
 }
+/* Scrollbar chrome */
+/* SCROLLBAR CONTATTI */
+.contact::-webkit-scrollbar {
+  width: 8px;
+  background-color: #ffff;
+}
+
+.contact::-webkit-scrollbar-track  {
+  width: 5px;
+}
+
+.contact::-webkit-scrollbar-thumb {
+  background-color: #cccc;
+  width: 9px;
+}
+
+/* Scrollbar chat */
+.chat-body::-webkit-scrollbar {
+  width: 8px;
+  background-color: trasparent;
+}
+
+.chat-body::-webkit-scrollbar-track  {
+  width: 5px;
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+  background-color: #cccc;
+  width: 9px;
+}
+
+
 
 /* Lato destro */
 
