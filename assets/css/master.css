@@ -1,8 +1,15 @@
+/* scrollbar */
+* {
+  scrollbar-color: rgba(0,0,0,.2) hsla(0,0%,100%,.1);
+  scrollbar-width: thin;
+}
+
 body {
   height: calc(100vh - 30px);
   background: linear-gradient(0deg, #DFDFDF 85%, #009788 15%);
   font-family: 'Lato', sans-serif;
 }
+
 
 #root {
   width: 70%;

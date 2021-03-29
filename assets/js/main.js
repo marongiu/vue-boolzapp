@@ -5,6 +5,8 @@ var app = new Vue({
 		user: '',
 		// Valore input
 		text: '',
+
+		messageslast: '',
 		// moment.js
 		// ultimo accesso
 		lastAccess: moment().locale('it').calendar().toLowerCase(),
@@ -232,29 +234,35 @@ var app = new Vue({
 					vueSelf.user.messages.push(interval)
 					// ogni 3 secondi pusha "ok"
 				},3000)
-
-				// alternativa on arrowfunction
-				// arrow function
-				// setTimeout(() => {
-				// 	let obj =
-				// 	{
-				// 			date: this.messageDate,
-				// 			text: "ok",
-				// 			status: 'received'
-				// 	}
-				// 	this.user.messages.push(obj)
-				// },3000)
-
 			} 			// fine if
 		},
 	},
 	computed: {
+		// Ricerca utenti con filter
 		searchUser: function () {
+			// Torno la funzione filtrata
 			return this.contacts.filter((contatto) => {
+				// Se il nome del contatto è incluso nella ricerca allora lo trovo
 				return contatto.name.toLowerCase().includes(this.search.toLowerCase())
 			})
 		}
 	}
 });
 
-//
+
+
+
+
+
+
+// alternativa on arrowfunction timeout
+// arrow function
+// setTimeout(() => {
+// 	let obj =
+// 	{
+// 			date: this.messageDate,
+// 			text: "ok",
+// 			status: 'received'
+// 	}
+// 	this.user.messages.push(obj)
+// },3000)
