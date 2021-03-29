@@ -98,6 +98,101 @@ var app = new Vue({
 					}
 				],
 			},
+			{
+				name: 'Valerio',
+				avatar: '_5',
+				visible: true,
+				messages: [
+					{
+						date: '10/01/2020 15:30:55',
+						text: 'Ciao, come stai?',
+						status: 'sent'
+					},
+					{
+						date: '10/01/2020 15:50:00',
+						text: 'Potrebbe andare meglio te?',
+						status: 'received'
+					}
+				],
+			},
+			{
+				name: 'Daniela',
+				avatar: '_6',
+				visible: true,
+				messages: [
+					{
+						date: '10/01/2020 15:30:55',
+						text: 'Come va con l università?',
+						status: 'sent'
+					},
+					{
+						date: '10/01/2020 15:50:00',
+						text: 'Bene mi manca un esame!',
+						status: 'received'
+					}
+				],
+			},
+			{
+				name: 'Lorenzo',
+				avatar: '_7',
+				visible: true,
+				messages: [
+					{
+						date: '10/01/2020 15:30:55',
+						text: 'Ti va di uscire domani?',
+						status: 'sent'
+					},
+					{
+						date: '10/01/2020 15:50:00',
+						text: 'Si, ma vorrei andare al parco',
+						status: 'received'
+					}
+				],
+			},
+			{
+				name: 'Simone',
+				avatar: '_8',
+				visible: true,
+				messages: [
+					{
+						date: '10/01/2020 15:30:55',
+						text: 'Oggi ci sei a lezione?',
+						status: 'sent'
+					},
+					{
+						date: '10/01/2020 15:50:00',
+						text: 'Mi serve una mano con un compito',
+						status: 'sent'
+					},
+					{
+						date: '10/01/2020 15:50:00',
+						text: 'Ci sono ci vediamo in classe',
+						status: 'received'
+					}
+				],
+			},
+			{
+				name: 'Max',
+				avatar: '_1',
+				visible: true,
+				messages: [
+					{
+						date: '10/01/2020 15:30:55',
+						text: 'Tra 10 minuti sono sotto casa tua!',
+						status: 'sent'
+					},
+					{
+						date: '10/01/2020 15:50:00',
+						text: 'Ricordati il regalo per Daniela',
+						status: 'sent'
+					},
+					{
+						date: '10/01/2020 15:50:00',
+						text: 'Ho preso tutto',
+						status: 'received'
+					}
+				],
+			},
 		],
 	},
 
