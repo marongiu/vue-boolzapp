@@ -193,11 +193,6 @@ ul {
   cursor: pointer;
 }
 
-.remove {
-  cursor: pointer;
-  position: relative;
-}
-
 .contact ul li > span {
   padding-top: 5px;
   padding-left: 12px;
@@ -324,6 +319,33 @@ ul {
   background-color: #ffff;
   border-radius: 15px;
 }
+
+.remove {
+  display: none;
+  padding-right: 5px;
+}
+
+.remove > i {
+  font-size: 17px;
+  color: grey;
+}
+
+.received span:hover .remove {
+  display: inline;
+}
+
+.received span {
+  cursor: pointer;
+}
+
+.sent span:hover .remove {
+  display: inline;
+}
+
+.sent span {
+  cursor: pointer;
+}
+
 
 .dateMessage {
   padding-top: 10px;
