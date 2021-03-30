@@ -191,7 +191,7 @@ var app = new Vue({
 			} 			// fine if
 		},
 		remove: function (message,i) {
-			message.text = "Hai eliminato il messaggio"
+			message.text = "❌ Hai eliminato questo messaggio"
 		},
 		notifications: function () {
 			this.visible = 'visible'
