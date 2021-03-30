@@ -399,6 +399,27 @@ ul {
 
 /* Darkmode */
 
-.dark {
-  background-color: rgba(0,0,0,0.6);
+.darkMode {
+  background-color: rgba(0,0,0,0.8)!important;
+  color: #ffff;
+  border: 0;
+}
+
+.notificationDark {
+  background-color: #cccc;
+}
+
+.black {
+  color: black!important;
+}
+
+.white {
+  color: #ffff!important;
+}
+
+
+
+
+.fa-moon:hover {
+  transform: scale(1.2);
 }

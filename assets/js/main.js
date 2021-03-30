@@ -11,6 +11,9 @@ var app = new Vue({
 		no_notification: '',
 		// Dark mode
 		darkMode: '',
+		notificationDark: '',
+		black: '',
+		white: '',
 		// moment.js
 		// ultimo accesso
 		lastAccess: moment().locale('it').calendar().toLowerCase(),
@@ -204,7 +207,10 @@ var app = new Vue({
 		},
 		// Dark mode
 		dark: function () {
-			this.darkMode = 'dark'
+			this.darkMode = 'darkMode'
+			this.notificationDark = 'notificationDark'
+			this.black = 'black'
+			this.white = 'white'
 		}
 	},
 	computed: {

@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./assets/css/master.css">
 
 </head>
-<body>
+<body :class="dark">
 
   <div id="root">
     <!-- Lato sinistro -->
@@ -24,26 +24,25 @@
         </div>
 
         <!-- Controlli destra -->
-        <div id="user-controller-right">
-          <i class="fas fa-circle-notch"></i>
-          <i class="text-dark fas fa-moon" @click="dark"></i>
-          <i class="fas fa-ellipsis-v"></i>
+        <div  id="user-controller-right">
+          <i :class="white" class="fas fa-circle-notch"></i>
+          <i :class="white" class="text-dark fas fa-moon" @click="dark"></i>
+          <i :class="white" class="fas fa-ellipsis-v"></i>
         </div>
       </div>
-
       <!-- Notifiche  Al click nascondi con vue.js  -->
-      <div  class= "notifications" :class="visible">
+      <div  class= "notifications" :class="[visible, darkMode]">
         <!-- Notifica icona -->
-        <span @click="notifications"><i class="fas fa-bell-slash"></i></span>
+        <span  @click="notifications"><i :class="black" class="fas fa-bell-slash"></i></span>
         <!-- Paragrafo p -->
         <div class="notifications-p">
           <!-- Notifiche paragrafi -->
           <p>Ricevi notifiche di nuovi messaggi</p>
-          <p id="click-notifications" @click="notifications">Attiva notifiche desktop</p>
+          <p id="click-notifications" @click="notifications" :class="white">Attiva notifiche desktop</p>
         </div>
       </div>
       <!-- Ricerca -->
-      <div class="search-box">
+      <div class="search-box" :class="darkMode">
         <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
           <input type="text" class="form-control" placeholder=" Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1"  v-model="search">
@@ -51,7 +50,7 @@
       </div>
 
       <!-- Contatti -->
-      <div class="contact" :class="no_notification">
+      <div class="contact" :class="darkMode">
         <ul>
           <!-- Contatti ciclo -->
           <li  v-for="(user, i) in searchUser" @click="changeUser(i)">
@@ -70,7 +69,7 @@
     <!-- Lato destro -->
     <div class="right">
       <!-- Nome utente contatto -->
-      <div class="header-chat">
+      <div class="header-chat" :class="darkMode">
         <!-- Contatto con cui scrivo -->
         <div class="receiver-user">
           <!-- Immagine contatto selezionato -->
@@ -85,7 +84,7 @@
           </div>
         </div>
         <!-- Controlli destra -->
-        <div class="header-controller-right">
+        <div  class="header-controller-right">
           <span><i class="fas fa-search"></i></span>
           <span><i class="fas fa-paperclip"></i></span>
           <span><i class="fas fa-ellipsis-v"></i></span>
@@ -98,7 +97,7 @@
           <li v-for="(message, i) in user.messages">
             <!-- Messaggi inviati -->
             <div class="sent" v-if="(message.status == 'sent')">
-              <span>{{message.text}}  <span class="dateMessage">{{messageDate}}</span>
+              <span :class="black">{{message.text}}  <span class="dateMessage">{{messageDate}}</span>
               <!-- Funzione rimuovi -->
               <span @click="remove(message,i)" class="remove">
                 <i class=" remove-icon fas  fa-angle-down"></i>
@@ -123,7 +122,7 @@
   </div>
 
   <!-- Invio messaggi -->
-  <div class="chat-controller">
+  <div class="chat-controller" :class="darkMode">
     <span><i class="far fa-smile"></i></span>
     <span class="inputbox"><input type="text" placeholder="Scrivi un messaggio" v-model="text" @keyup.enter="addMessage"></span>
     <span><i class="fas fa-microphone"></i></span>
