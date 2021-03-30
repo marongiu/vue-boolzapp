@@ -396,3 +396,9 @@ ul {
   font-size: 13px;
   color: lightgrey;
 }
+
+/* Darkmode */
+
+.dark {
+  background-color: rgba(0,0,0,0.6);
+}
