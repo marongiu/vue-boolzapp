@@ -168,6 +168,7 @@ p {
 /* reimposto height notification */
 
 .no_notification {
+  padding-top: 10px;
   height: calc(100% - 120px);
 }
 

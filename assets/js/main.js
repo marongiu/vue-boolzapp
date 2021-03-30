@@ -1,7 +1,7 @@
 var app = new Vue({
 	el: '#root',
 	data: {
-		// Dati username
+		// Dati user
 		user: '',
 		// Valore input
 		text: '',
@@ -9,8 +9,6 @@ var app = new Vue({
 		visible: '',
 		// Reimposto height contatti
 		no_notification: '',
-
-		messageslast: '',
 		// moment.js
 		// ultimo accesso
 		lastAccess: moment().locale('it').calendar().toLowerCase(),
@@ -224,19 +222,15 @@ var app = new Vue({
 					}
 				),
 				this.text = ''
-
-				// Funzione timeout con self
-				var vueSelf = this;
-				// Funzione timeout
-				setTimeout(function () {
-					let interval =
+				// Funzione timeout arrow function con this vue.js
+				setTimeout(() => {
+					let obj =
 					{
-						date: this.messageDate,
-						text: "ok",
-						status: 'received'
+							date: this.messageDate,
+							text: "ok",
+							status: 'received'
 					}
-					vueSelf.user.messages.push(interval)
-					// ogni 3 secondi pusha "ok"
+					this.user.messages.push(obj)
 				},3000)
 			} 			// fine if
 		},
