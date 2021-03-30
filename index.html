@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./assets/css/master.css">
 
 </head>
-<body :class="dark">
+<body :class="black">
 
   <div id="root">
     <!-- Lato sinistro -->
@@ -33,7 +33,7 @@
       <!-- Notifiche  Al click nascondi con vue.js  -->
       <div  class= "notifications" :class="[visible, darkMode]">
         <!-- Notifica icona -->
-        <span  @click="notifications"><i :class="black" class="fas fa-bell-slash"></i></span>
+        <span  @click="notifications"><i :class="blackcolor" class="fas fa-bell-slash"></i></span>
         <!-- Paragrafo p -->
         <div class="notifications-p">
           <!-- Notifiche paragrafi -->
@@ -85,19 +85,19 @@
         </div>
         <!-- Controlli destra -->
         <div  class="header-controller-right">
-          <span><i class="fas fa-search"></i></span>
-          <span><i class="fas fa-paperclip"></i></span>
-          <span><i class="fas fa-ellipsis-v"></i></span>
+          <span><i :class="white" class="fas fa-search"></i></span>
+          <span><i :class="white" class="fas fa-paperclip"></i></span>
+          <span><i :class="white" class="fas fa-ellipsis-v"></i></span>
         </div>
       </div>
       <!-- Corpo della chat -->
-      <div class="chat-body">
+      <div class="chat-body" :class="black">
         <ul>
           <!-- Ciclo array messages -->
           <li v-for="(message, i) in user.messages">
             <!-- Messaggi inviati -->
             <div class="sent" v-if="(message.status == 'sent')">
-              <span :class="black">{{message.text}}  <span class="dateMessage">{{messageDate}}</span>
+              <span>{{message.text}}  <span class="dateMessage">{{messageDate}}</span>
               <!-- Funzione rimuovi -->
               <span @click="remove(message,i)" class="remove">
                 <i class=" remove-icon fas  fa-angle-down"></i>
@@ -123,9 +123,9 @@
 
   <!-- Invio messaggi -->
   <div class="chat-controller" :class="darkMode">
-    <span><i class="far fa-smile"></i></span>
+    <span><i :class="white" class="far fa-smile"></i></span>
     <span class="inputbox"><input type="text" placeholder="Scrivi un messaggio" v-model="text" @keyup.enter="addMessage"></span>
-    <span><i class="fas fa-microphone"></i></span>
+    <span><i :class="white" class="fas fa-microphone"></i></span>
   </div>
 </div>
 </div>

@@ -11,7 +11,7 @@ var app = new Vue({
 		no_notification: '',
 		// Dark mode
 		darkMode: '',
-		notificationDark: '',
+		blackcolor: '',
 		black: '',
 		white: '',
 		// moment.js
@@ -163,7 +163,7 @@ var app = new Vue({
 
 	// Document ready contatto Michele
 	mounted: function () {
-		this.user = this.contacts[0]
+		this.user = this.contacts[0];
 	},
 	// Funzioni
 	methods: {
@@ -207,8 +207,9 @@ var app = new Vue({
 		},
 		// Dark mode
 		dark: function () {
+			document.body.classList.add('black')
 			this.darkMode = 'darkMode'
-			this.notificationDark = 'notificationDark'
+			this.blackcolor = 'blackcolor'
 			this.black = 'black'
 			this.white = 'white'
 		}

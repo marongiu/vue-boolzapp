@@ -405,20 +405,17 @@ ul {
   border: 0;
 }
 
-.notificationDark {
-  background-color: #cccc;
+.blackcolor {
+  color: black!important;
 }
 
 .black {
-  color: black!important;
+  background: black!important;
 }
 
 .white {
   color: #ffff!important;
 }
-
-
-
 
 .fa-moon:hover {
   transform: scale(1.2);
