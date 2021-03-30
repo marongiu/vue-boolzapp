@@ -368,3 +368,8 @@ ul {
 
   text-align: center;
 }
+
+#lastText {
+  font-size: 13px;
+  color: lightgrey;
+}

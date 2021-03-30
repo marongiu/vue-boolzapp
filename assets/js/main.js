@@ -242,7 +242,7 @@ var app = new Vue({
 			if (this.visible == 'visible') {
 				this.no_notification = 'no_notification'
 			}
-		}
+		},
 	},
 	computed: {
 		// Ricerca utenti con filter
