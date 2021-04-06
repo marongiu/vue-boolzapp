@@ -246,7 +246,7 @@ var app = new Vue({
 		},
 
 		selectEmoji: function (emoji,i) {
-			this.text = emoji
+			this.text += emoji
 		}
 
 	},
