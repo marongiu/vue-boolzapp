@@ -2,8 +2,10 @@ var app = new Vue({
 	el: '#root',
 	data: {
 		// Dati user
+		// salvo i contatti nell' user
 		user: '',
-		active: '',
+		// index per l'active
+		index:  0,
 		// Valore input
 		text: '',
 		// Visibilita Notifiche
@@ -172,6 +174,7 @@ var app = new Vue({
 		// Salvo il contatto
 		changeUser: function (i) {
 			this.user = this.contacts[i];
+			this.index = i;
 		},
 
 		addMessage: function () {

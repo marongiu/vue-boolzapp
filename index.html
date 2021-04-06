@@ -54,7 +54,7 @@
       <div class="contact" :class="darkMode">
         <ul>
           <!-- Contatti ciclo -->
-          <li  v-for="(user, i) in searchUser" @click="changeUser(i)">
+          <li  :class="(i == index) ? 'active' : ''" v-for="(user, i) in searchUser" @click="changeUser(i)">
             <img :src= " `./assets/img/avatar${user.avatar}.jpg`">
             <!-- Nome contatto -->
             <span> {{ user.name }} <br> <p id="lastText">text</p></span>

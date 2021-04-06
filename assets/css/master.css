@@ -1,6 +1,5 @@
 /* scrollbar */
 * {
-  scrollbar-color: rgba(0,0,0,.2) hsla(0,0%,100%,.1);
   scrollbar-width: thin;
 }
 
@@ -437,4 +436,8 @@ ul {
   0% {
     transform: scale(1.2);
   }
+}
+
+.active {
+  background: #cccc;
 }
