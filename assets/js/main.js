@@ -243,6 +243,10 @@ var app = new Vue({
 
 		closeEmoji: function () {
 			this.icon = false;
+		},
+
+		selectEmoji: function (emoji,i) {
+			this.text = emoji
 		}
 
 	},
