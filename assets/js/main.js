@@ -3,6 +3,7 @@ var app = new Vue({
 	data: {
 		// Dati user
 		user: '',
+		active: '',
 		// Valore input
 		text: '',
 		// Visibilita Notifiche
@@ -171,8 +172,8 @@ var app = new Vue({
 		// Salvo il contatto
 		changeUser: function (i) {
 			this.user = this.contacts[i];
-			console.log(this.user);
 		},
+
 		addMessage: function () {
 			// Controllo
 			if (this.text.length >= 1) {
@@ -189,9 +190,9 @@ var app = new Vue({
 				setTimeout(() => {
 					let obj =
 					{
-							date: this.messageDate,
-							text: "ok",
-							status: 'received'
+						date: this.messageDate,
+						text: "ok",
+						status: 'received'
 					}
 					this.user.messages.push(obj)
 				},3000)
@@ -216,7 +217,7 @@ var app = new Vue({
 			this.black = 'black'
 			this.white = 'white'
 		},
-// Rimozione darkmode
+		// Rimozione darkmode
 		nodark: function () {
 			document.body.classList.toggle('black')
 			this.check = true;

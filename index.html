@@ -27,7 +27,7 @@
         <div  id="user-controller-right">
           <i :class="white" class="fas fa-circle-notch"></i>
           <i v-if="(check == true)" :class="white" class="text-dark fas fa-moon" @click="dark"></i>
-          <i v-else :class="white" class="text-dark fas fa-sun" @click="nodark"></i>
+          <i v-else  class="text-dark fas fa-sun" @click="nodark"></i>
           <i :class="white" class="fas fa-ellipsis-v"></i>
         </div>
       </div>
@@ -57,7 +57,7 @@
           <li  v-for="(user, i) in searchUser" @click="changeUser(i)">
             <img :src= " `./assets/img/avatar${user.avatar}.jpg`">
             <!-- Nome contatto -->
-            <span> {{ user.name }} <br> <p id="lastText">prova</p></span>
+            <span> {{ user.name }} <br> <p id="lastText">text</p></span>
             <!-- Ultima chat visita con il contatto -->
             <div id="access">
               {{accessUser}}
@@ -114,6 +114,7 @@
               <!-- dropdown -->
               <i class="remove-icon fas  fa-angle-down"></i>
               <span class="dropdown">
+
               </span>
             </span>
           </span>
