@@ -124,6 +124,7 @@
   </div>
 
   <!-- Invio messaggi -->
+  <!-- Sezione emoji -->
   <div class="chat-controller" :class="darkMode">
     <div v-if="(icon)" class= "emoticon">
       <div class="search-emoticon">
@@ -138,12 +139,15 @@
           <li><i class="fas fa-hashtag"></i></li>
           <li><i class="far fa-flag"></i></li>
         </ul>
+        <!-- Input cerca emoji -->
         <input type="text" name="" value="" placeholder="   Cerca Emoji">
       </div>
       <ul>
+        <!-- Emoji array for -->
         <li @click="selectEmoji(emoji,i)" v-for="(emoji,i) in emoticon">{{emoji}}</li>
       </ul>
     </div>
+    <!-- Sezione controlli e invio messaggio -->
     <span v-if="(icon)"><i class="fas fa-times" @click="closeEmoji"></i></span>
     <span ><i @click="emoji" :class="white" class="far fa-smile"></i></span>
     <span class="inputbox"><input type="text" placeholder="Scrivi un messaggio" v-model="text" @keyup.enter="addMessage"></span>

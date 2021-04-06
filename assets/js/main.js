@@ -182,6 +182,8 @@ var app = new Vue({
 		changeUser: function (i) {
 			this.user = this.contacts[i];
 			this.index = i;
+			this.icon = false;
+			this.text = '';
 		},
 
 		addMessage: function () {

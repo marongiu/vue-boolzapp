@@ -440,7 +440,8 @@ ul {
 }
 
 .active {
-  background: #cccc;
+  opacity: 0.9;
+  background-color: #eeee;
 }
 
 /* Emoji */
@@ -475,9 +476,7 @@ ul#emoticon-sort li{
   border: 0;
   border-radius: 5px;
   height: 35px;
-
 }
-
 
 
 @media all and  (max-width: 1750px) {
