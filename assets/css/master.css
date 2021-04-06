@@ -447,9 +447,10 @@ ul {
 
 .emoticon {
   position: absolute;
-  bottom: 100px;
+  bottom: 70px;
+  left: 0;
   background-color: #cccc;
-  width: 90%;
+  width: 100%;
 }
 
 .emoticon ul li {
