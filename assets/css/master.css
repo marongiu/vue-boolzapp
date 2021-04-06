@@ -417,6 +417,10 @@ ul {
   color: #ffff!important;
 }
 
-.fa-moon:hover {
+.fa-moon:hover, .fa-sun:hover {
   transform: scale(1.2);
+}
+
+.fa-sun {
+  color: yellow!important;
 }

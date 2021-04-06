@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./assets/css/master.css">
 
 </head>
-<body :class="black">
+<body>
 
   <div id="root">
     <!-- Lato sinistro -->
@@ -26,7 +26,8 @@
         <!-- Controlli destra -->
         <div  id="user-controller-right">
           <i :class="white" class="fas fa-circle-notch"></i>
-          <i :class="white" class="text-dark fas fa-moon" @click="dark"></i>
+          <i v-if="(check == true)" :class="white" class="text-dark fas fa-moon" @click="dark"></i>
+          <i v-else :class="white" class="text-dark fas fa-sun" @click="nodark"></i>
           <i :class="white" class="fas fa-ellipsis-v"></i>
         </div>
       </div>

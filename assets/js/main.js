@@ -14,6 +14,7 @@ var app = new Vue({
 		blackcolor: '',
 		black: '',
 		white: '',
+		check: true,
 		// moment.js
 		// ultimo accesso
 		lastAccess: moment().locale('it').calendar().toLowerCase(),
@@ -114,7 +115,7 @@ var app = new Vue({
 				messages: [
 					{
 						date: '10/01/2020 15:30:55',
-						text: 'Ciao, come stai?',
+						text: 'Ciao, come va?',
 						status: 'sent'
 					},
 					{
@@ -170,6 +171,7 @@ var app = new Vue({
 		// Salvo il contatto
 		changeUser: function (i) {
 			this.user = this.contacts[i];
+			console.log(this.user);
 		},
 		addMessage: function () {
 			// Controllo
@@ -207,12 +209,23 @@ var app = new Vue({
 		},
 		// Dark mode
 		dark: function () {
+			this.check = false
 			document.body.classList.add('black')
 			this.darkMode = 'darkMode'
 			this.blackcolor = 'blackcolor'
 			this.black = 'black'
 			this.white = 'white'
+		},
+// Rimozione darkmode
+		nodark: function () {
+			document.body.classList.toggle('black')
+			this.check = true;
+			this.darkMode = ''
+			this.blackcolor = ''
+			this.black = ''
+			this.white = ''
 		}
+
 	},
 	computed: {
 		// Ricerca utenti con filter
