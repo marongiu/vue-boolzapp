@@ -1,6 +1,8 @@
 var app = new Vue({
 	el: '#root',
 	data: {
+
+
 		// Dati user
 		// salvo i contatti nell' user
 		user: '',
@@ -8,16 +10,22 @@ var app = new Vue({
 		index:  0,
 		// Valore input
 		text: '',
+
 		// Visibilita Notifiche
 		visible: '',
 		// Reimposto height contatti
 		no_notification: '',
+
 		// Dark mode
 		darkMode: '',
 		blackcolor: '',
 		black: '',
 		white: '',
 		check: true,
+
+		// emoticon
+		emoticon:  ["😀","😃","😀","😃","😄","😁","😆","😅","🤣","😂","🙂"],
+		icon: false,
 		// moment.js
 		// ultimo accesso
 		lastAccess: moment().locale('it').calendar().toLowerCase(),
@@ -228,6 +236,10 @@ var app = new Vue({
 			this.blackcolor = ''
 			this.black = ''
 			this.white = ''
+		},
+
+		emoji: function () {
+			this.icon = true;
 		}
 
 	},

@@ -125,7 +125,12 @@
 
   <!-- Invio messaggi -->
   <div class="chat-controller" :class="darkMode">
-    <span><i :class="white" class="far fa-smile"></i></span>
+    <div v-if="(icon == true)" class="emoticon">
+      <ul>
+        <li v-for="(emoji,i) in emoticon">{{emoji}}</li>
+      </ul>
+    </div>
+    <span ><i @click="emoji" :class="white" class="far fa-smile"></i></span>
     <span class="inputbox"><input type="text" placeholder="Scrivi un messaggio" v-model="text" @keyup.enter="addMessage"></span>
     <span><i :class="white" class="fas fa-microphone"></i></span>
   </div>

@@ -362,6 +362,7 @@ ul {
   justify-content: space-between;
   align-items: center;
   padding: 20px 25px;
+  position: relative;
 }
 
 .chat-controller span > i {
@@ -440,4 +441,25 @@ ul {
 
 .active {
   background: #cccc;
+}
+
+/* Emoji */
+
+.emoticon {
+  position: absolute;
+  bottom: 100px;
+  background-color: #cccc;
+  width: 90%;
+}
+
+.emoticon ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.icon {
+  display: none;
 }
