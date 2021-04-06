@@ -126,6 +126,20 @@
   <!-- Invio messaggi -->
   <div class="chat-controller" :class="darkMode">
     <div v-if="(icon)" class= "emoticon">
+      <div class="search-emoticon">
+        <ul id="emoticon-sort">
+          <li><i class="far fa-clock"></i></li>
+          <li><i class="far fa-smile"></i></li>
+          <li><i class="fas fa-paw"></i></li>
+          <li><i class="fas fa-coffee"></i></li>
+          <li><i class="fas fa-futbol"></i></li>
+          <li><i class="fas fa-car"></i></li>
+          <li><i class="far fa-lightbulb"></i></li>
+          <li><i class="fas fa-hashtag"></i></li>
+          <li><i class="far fa-flag"></i></li>
+        </ul>
+        <input type="text" name="" value="" placeholder="   Cerca Emoji">
+      </div>
       <ul>
         <li @click="selectEmoji(emoji,i)" v-for="(emoji,i) in emoticon">{{emoji}}</li>
       </ul>
