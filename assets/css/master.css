@@ -417,10 +417,24 @@ ul {
   color: #ffff!important;
 }
 
-.fa-moon:hover, .fa-sun:hover {
-  transform: scale(1.2);
-}
-
 .fa-sun {
   color: yellow!important;
+  animation-name: obj;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.fa-moon {
+  animation-name: obj;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes obj {
+  0% {
+    transform: scale(1.2);
+  }
 }
