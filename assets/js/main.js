@@ -240,6 +240,10 @@ var app = new Vue({
 
 		emoji: function () {
 			this.icon = true;
+		},
+
+		closeEmoji: function () {
+			this.icon = false;
 		}
 
 	},
