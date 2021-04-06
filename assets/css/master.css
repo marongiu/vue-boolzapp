@@ -449,14 +449,15 @@ ul {
   position: absolute;
   bottom: 70px;
   left: 0;
-  background-color: #cccc;
+  background-color: #f0f0f0;
   width: 100%;
+  height: 100px;
 }
 
 .emoticon ul li {
   list-style: none;
   display: inline-block;
-  padding: 0 5px;
+  padding: 10px 5px;
   font-size: 20px;
   cursor: pointer;
 }
